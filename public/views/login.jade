@@ -1,0 +1,26 @@
+doctype html
+head
+    title Tangerine - Login
+    link(href='/stylesheet.css', rel='stylesheet')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='js.cookie.js')
+    script(src='javascript.js')
+body#loginBody
+   if user
+      a(href='/profile') view profile
+      br
+      a(href='/logout') log out
+    else
+      h1 Tangerine
+      h2 Please Enter Your Username and Password Below
+        form(action="/" method="post")
+          fieldset
+            p Username
+            input#userNameInput(type="text" name="username")
+            p Password
+            input#passwordInput(type="password" name="password")
+            p
+            input#magicButton(type="submit")
+            p If you do not have an account, please 
+            a(href='/register') register here.
+    h2.alert= message

@@ -1,0 +1,27 @@
+doctype html
+head
+    title Le Blog - Read and Comment
+    link(href='/stylesheet.css', rel='stylesheet')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='resource/js.cookie.js')
+    script(src='resource/javascript.js')
+body
+  h1 The Greatest Blog App the World Has Ever Seen
+  h2.alert= alert
+  h2= post.title
+  h2= post.body
+  div
+    h3 Comments on this post:
+    each comment in comments
+      li #{comment.comment} (#{comment.author})
+  div
+    p Comment away!
+      form(action="/seePosts/#{post.id}" method="post")
+        p
+        textarea#commentForm(type="text" name="commentBody")
+        p
+        input#submitButton(type="submit")
+  p
+    a(href='/profile') go back to your landing page
+  p
+    a(href='/seePosts') see all user posts

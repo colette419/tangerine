@@ -1,0 +1,13 @@
+doctype html
+head
+    title Le Blog - See My Posts
+    link(href='/stylesheet.css', rel='stylesheet')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='/x/js.cookie.js')
+    script(src='javascript.js')
+body
+    each post in message
+      li 
+        a(href='/seePosts/#{post.id}') #{post.title}
+    p
+    a(href='/profile') go back to your landing page

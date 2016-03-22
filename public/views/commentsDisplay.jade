@@ -1,0 +1,12 @@
+doctype html
+head
+    title Le Blog - See Comments
+    link(href='/stylesheet.css', rel='stylesheet')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='/x/js.cookie.js')
+    script(src='javascript.js')
+body
+    each comment in comments
+      li #{comment.comment} #{comment.author}
+    p
+    a(href='/profile') go back to your landing page

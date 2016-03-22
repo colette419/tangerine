@@ -1,0 +1,44 @@
+body {
+	background-color: #ff5a00;
+}
+
+#loginBody {
+	text-align: center;
+}
+
+#register {
+	font-size: 125%;
+}
+
+.pInline {
+	display: inline;
+	text-align: left;
+}
+
+.formInput {
+	font-weight: bold;
+}
+
+.alert {
+	color: red;
+}
+
+#bodyForm {
+	width: 500px;
+	min-height: 200px;
+	vertical-align: top;
+}
+
+.cursive {
+	font-family: 'Brush Script MT', cursive;
+}
+
+#commentForm {
+	width: 750px;
+}
+
+#registerBody {
+	padding: 25px;
+	background-color: #ff5a00;
+}
+

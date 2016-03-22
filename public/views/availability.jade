@@ -1,0 +1,27 @@
+doctype html
+head
+    title Tangerine - Availability
+    link(href='/stylesheet.css', rel='stylesheet')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='/scripts/js.cookie.js')
+    script(src='/scripts/javascript.js')
+body
+  h1 Availability
+  each time in availabilityBlob
+    li #{time.date}
+    li #{time.beginTime} until #{time.endTime}
+  form(action="/availability" method="post")
+    fieldset 
+      legend#availability pick your available date(s) below:
+      p
+      p.pInline Date:
+      input#registerGender(type="date" name="availableDate")
+      p
+      p.pInline Start of Availability:
+      input#beginTime(type="time" name="beginTime")
+      p
+      p.pInline End of Availability:
+      input#endTime(type="time" name="endTime")
+      p
+      input#availabilitySubmit(type="submit")
+  a(href='/logout') log out

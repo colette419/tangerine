@@ -1,0 +1,13 @@
+doctype html
+head
+    title Le Blog - See All Posts
+    link(href='/stylesheet.css', rel='stylesheet')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='resource/js.cookie.js')
+    script(src='resource/javascript.js')
+body
+    each post in message
+      li 
+        a(href='/seePosts/#{post.id}') #{post.title}, by #{post.user}
+    p
+    a(href='/profile') go back to your landing page

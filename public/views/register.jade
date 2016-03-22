@@ -1,0 +1,57 @@
+doctype html
+head
+    title Le Blog - Register
+    link(href='/stylesheet.css', rel='stylesheet')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    link(href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', rel='stylesheet')
+    script(src='/scripts/js.cookie.js')
+    script(src='/scripts/javascript.js')
+body#registerBody
+  h1.alert=message
+  h1 Please Enter the Following Information to Register:
+  p
+    form(action="/register" method="post")
+      fieldset 
+          legend#register Registration Form
+          p
+          p.pInline First Name: 
+          input#registerFirstName(type="text" name="firstName")
+          p
+          p.pInline Last Name: 
+          input#registerLastName(type="text" name="lastName")
+          p
+          p.pInline Email Address: 
+          input#registerEmail(type="text" name="email")
+          p
+          p.pInline Gender: 
+          select#registerGender(type="text" name="gender")
+            option Male
+            option Female
+            option I'd Rather not say
+          p
+          p.pInline Birthday:
+          input#registerGender(type="date" name="birthday")
+          p
+          p.pInline I'm Looking For:
+          select#registerLooking(type="text" name="looking")
+            option Male
+            option Female
+            option Any
+          p
+          p.pInline City:
+          select#registerLocation(type="text" name="city")
+            option Amsterdam
+          p
+          p.pInline Pick a Username: 
+          input#registerUsername(type="text" name="username")
+          p
+          p.pInline Password: 
+          input#newPassword(type="password" name="password")
+          p
+          p.pInline Confirm Password: 
+          input#confirmPassword(type="password" name="confirmPassword")
+          p
+          input#registrationSubmit(type="submit")
+          p 
+          a(href='/') i don't want to register
+
